@@ -18,7 +18,7 @@ function Main(props) {
 
   const createPeople = async person => {
     // make post request to create people
-    await fetch(URL, {
+    await fetch(`${URL}people`, {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",

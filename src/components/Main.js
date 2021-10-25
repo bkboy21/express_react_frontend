@@ -8,7 +8,7 @@ import Show from "../pages/Show"
 function Main(props) {
   const [ people, setPeople ] = useState(null);
 
-  const URL = "https://express-react-oct.herokuapp.com/people/";
+  const URL = "https://express-react-oct.herokuapp.com/";
 
   const getPeople = async () => {
     const response = await fetch(URL);

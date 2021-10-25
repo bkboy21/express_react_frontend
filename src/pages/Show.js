@@ -25,10 +25,11 @@ function Show(props) {
   }
 
   return (
+    
     <div className="person">
-      <h1>{person.name}</h1>
+      <h1 className="h1">{person.name}</h1>
       <h2>{person.title}</h2>
-      <img src={person.image} alt={person.name} />
+      <h1>{person.iAmG}</h1>
       <button id="delete" onClick={removePerson}>
         DELETE
       </button>
@@ -42,16 +43,16 @@ function Show(props) {
         />
         <input
           type="text"
-          value={editForm.image}
-          name="image"
+          value={editForm.iAmG}
+          name="iAmG"
           placeholder="image URL"
           onChange={handleChange}
         />
         <input
           type="text"
-          value={editForm.title}
-          name="title"
-          placeholder="title"
+          value={editForm.date}
+          name="date"
+          placeholder="date"
           onChange={handleChange}
         />
         <input type="submit" value="Update Person" />

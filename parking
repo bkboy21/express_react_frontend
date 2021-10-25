@@ -1,0 +1,43 @@
+index js 
+
+ <Link to={`/people/${person._id}`}>
+          <h1>{person.name}</h1>
+        </Link>
+
+
+
+
+
+        csss 
+
+
+        section,
+div {
+  form {
+    input {
+      @include white-text-black-bg;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+
+      &[type="submit"]:hover {
+        @include black-test-white-bg;
+      }
+    }
+  }
+}
+
+
+
+.person{
+  border:rgba(2, 49, 237, 0.461) solid,;
+  display: flexbox;
+  align-content: space-between;
+  margin-top: 3px;
+  margin-bottom: 3px;  
+}
+
+
+
+
+

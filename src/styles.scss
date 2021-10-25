@@ -1,8 +1,8 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor: black;
-$contrastcolor: white;
+$maincolor: rgba(202,231,239,255);
+$contrastcolor: rgba(34, 49, 106, 0.461);
 
 @mixin white-text-black-bg {
   color: $contrastcolor;
@@ -19,15 +19,18 @@ $contrastcolor: white;
 // --------------------------
 
 nav {
-  @include white-text-black-bg;
+  // @include white-text-black-bg;
   display: flex;
   justify-content: flex-start;
-
+ 
   a {
     @include white-text-black-bg;
     div {
       margin: 10px;
       font-size: large;
+      display:inline-flex;
+      justify-content: center;
+  align-content: center;
     }
   }
 }
@@ -44,6 +47,7 @@ div {
       padding: 10px;
       font-size: 1.1em;
       margin: 10px;
+      border-radius: 100%;
 
       &[type="submit"]:hover {
         @include black-test-white-bg;
@@ -62,6 +66,7 @@ button#delete {
   margin: auto;
   font-size: 1.3em;
   padding: 10px;
+  
 }
 
 // --------------------------
@@ -73,4 +78,124 @@ img {
   height: 300px;
   border-radius: 90px;
   object-fit: cover;
+}
+
+
+body {
+  background-image: url("https://i.imgur.com/oh5IDk7.jpg");
+}
+
+.person{
+  width: 250px;
+  height: 250px;
+  background: rgb(227, 232, 233);
+// margin: 10px 10px;
+transition: 1s;
+opacity: 0%;
+border-radius: 100%;
+font-family: "Tangerine" ;
+font-size: 25px ;
+}
+
+
+.person:hover{
+  transform: scale(1.3);
+  background: rgba(204,235,239,280);
+  z-index: 2;
+  box-shadow: 2px 2px 2px #000;
+  opacity: 100%;
+  
+}
+
+
+.peoples{
+  width: 90%;
+  padding: 20px 20px 20px 150px;
+  // margin: 100px 100px 100px 100px;
+  
+  display: grid;
+  column-gap: 2px;
+  row-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // flex-direction: row;
+  // justify-content: center;
+  
+}
+
+
+
+h1 {
+  color: #000;
+}
+
+
+
+.social-menu {
+	display: flex;
+	list-style-type: none;
+}
+ 
+.social-menu i {
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 25px;
+	margin-right: 10px;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	justify-content: center;
+}
+
+.social-menu i:before {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.social-menu a {
+	text-decoration: none;
+}
+
+.fa-facebook {
+	background:#3b5998
+} 
+
+.fa-linkedin {
+	background:#007bb6
+}
+
+.fa-twitter {
+	background:#00aced
+}
+
+.fa-instagram {
+	background:#3f729b
+}
+
+.fa-youtube {
+	background:#c4302b
+}
+
+.social-menu i:hover {
+	opacity: .7;
+	border-radius: 0;
+}
+
+.topline{
+  opacity: 1;
+  animation: fade 2s linear;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+
+.topline:hover{
+  transform: scale(3);
+  background: rgba(204,235,239,280);
+  z-index: 2;
+  // box-shadow: 2px 2px 2px #000;
+  opacity: 100%;
+  
 }

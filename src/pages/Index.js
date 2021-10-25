@@ -5,8 +5,8 @@ function Index(props) {
   // state to hold formData
   const [ newForm, setNewForm ] = useState({
     name: "",
-    image: "",
-    title: "",
+    iAmG: "",
+    date: "",
   });
 
   // handleChange function for form
@@ -20,8 +20,8 @@ function Index(props) {
     props.createPeople(newForm);
     setNewForm({
       name: "",
-      image: "",
-      title: "",
+      iAmG: "",
+      date: "",
     });
   }
 
@@ -29,11 +29,11 @@ function Index(props) {
   const loaded = () => {
     return props.people.map(person => (
       <div key={person._id} className="person">
-        <Link to={`/people/${person._id}`}>
+        {/* <Link to={`/people/${person._id}`}> */}
           <h1>{person.name}</h1>
-        </Link>
-        <img src={person.image} alt={person.name} />
-        <h3>{person.title}</h3>
+        {/* </Link> */}
+        <h2>{person.iAmG}</h2>
+        <h3>{person.date}</h3>
       </div>
     ));
   }
@@ -43,33 +43,34 @@ function Index(props) {
   }
 
   return (
-    <section>
+    <container>
+      
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={newForm.name}
           name="name"
-          placeholder="name"
+          placeholder="              Name"
           onChange={handleChange}
         />
         <input
           type="text"
-          value={newForm.image}
-          name="image"
-          placeholder="image URL"
+          value={newForm.iAmG}
+          name="iAmG"
+          placeholder="      I Am Grateful For ?"
           onChange={handleChange}
         />
         <input
           type="text"
-          value={newForm.title}
-          name="title"
-          placeholder="title"
+          value={newForm.date}
+          name="date"
+          placeholder="      Date: MM/DD/YY"
           onChange={handleChange}
         />
-        <input type="submit" value="Create Person" />
+        <input type="submit" value="Submit" />
       </form>
-      {props.people ? loaded() : loading()}
-    </section>
+      <div className="peoples">{props.people ? loaded() : loading()}</div>
+    </container>
   );
 }
 

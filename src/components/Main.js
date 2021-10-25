@@ -11,7 +11,7 @@ function Main(props) {
   const URL = "https://express-react-oct.herokuapp.com/";
 
   const getPeople = async () => {
-    const response = await fetch(URL);
+    const response = await fetch(`${URL}people`);
     const data = await response.json();
     setPeople(data);
   }

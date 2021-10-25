@@ -11,14 +11,14 @@ function Main(props) {
   const URL = "https://express-react-oct.herokuapp.com/";
 
   const getPeople = async () => {
-    const response = await fetch(`${URL}people`);
+    const response = await fetch(URL);
     const data = await response.json();
     setPeople(data);
   }
 
   const createPeople = async person => {
     // make post request to create people
-    await fetch(`${URL}people`, {
+    await fetch(URL, {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",

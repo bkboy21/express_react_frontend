@@ -10,6 +10,10 @@ function Main(props) {
 
   const URL = "https://express-react-oct.herokuapp.com/people/";
 
+  // https://express-react-oct.herokuapp.com/
+
+  
+
   const getPeople = async () => {
     const response = await fetch(URL);
     const data = await response.json();

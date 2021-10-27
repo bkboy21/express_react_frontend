@@ -8,7 +8,7 @@ import Show from "../pages/Show"
 function Main(props) {
   const [ people, setPeople ] = useState(null);
 
-  const URL = "https://express-react-lab-nir.herokuapp.com/";
+  const URL = "https://express-react-lab-nir.herokuapp.com/people/";
 
   const getPeople = async () => {
     const response = await fetch(URL);

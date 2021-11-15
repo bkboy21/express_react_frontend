@@ -8,10 +8,10 @@ import Show from "../pages/Show"
 function Main(props) {
   const [ people, setPeople ] = useState(null);
 
-  const URL = "https://master.dyx8x8gtung8x.amplifyapp.com/people/";
+  const URL = "https://express-react-oct.herokuapp.com/people/";
 
   
-  // https://express-react-oct.herokuapp.com/people/
+  // 
   
   
   // https://express-react-oct.herokuapp.com/

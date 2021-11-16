@@ -91,7 +91,7 @@ body {
   background: rgb(227, 232, 233);
 // margin: 10px 10px;
 transition: 1s;
-opacity: 99%;
+// opacity: 99%;
 border-radius: 100%;
 font-family: "Tangerine" ;
 font-size: 25px ;
@@ -103,7 +103,7 @@ font-size: 25px ;
   background: rgba(204,235,239,280);
   z-index: 2;
   box-shadow: 2px 2px 2px #000;
-  opacity: 100%;
+//   opacity: 100%;
   
 }
 
@@ -178,12 +178,12 @@ h1 {
 }
 
 .social-menu i:hover {
-	opacity: .7;
+// 	opacity: .7;
 	border-radius: 0;
 }
 
 .topline{
-  opacity: 100;
+//   opacity: 100;
   animation: fade 2s linear;
   justify-content: center;
   align-content: center;
@@ -196,11 +196,11 @@ h1 {
   background: rgba(204,235,239,280);
   z-index: 2;
   // box-shadow: 2px 2px 2px #000;
-  opacity: 100%;
+//   opacity: 100%;
   
 }
 
 
 h3 {
-  opacity: 100%;
+//   opacity: 100%;
 }
